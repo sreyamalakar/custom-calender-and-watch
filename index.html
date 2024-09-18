@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link rel="stylesheet" href="calender.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div><a href="index.html">Calendar</a></div>
+            <div><a href="digital-watch.html">Digital-Watch</a></div>
+        </div>
+    </header>
+    
+    <div class="calender" style="padding-top:30px;">
+        <span class="select-holder"> 
+        <select class="select1" name="select1" onmousedown="if(this.options.length>6){this.size=6;}" onblur="this.size=0;" onchange="this.size=0;changeYear(this.value)">
+
+        </select>
+    </span>
+    <select class="select2" onchange="futureYear(this.value)">
+         <option class="months" value="0">Jan</option>
+         <option class="months" value="1">Feb</option>
+         <option class="months" value="2">Mar</option>
+         <option  class="months"value="3">April</option>
+            <option  class="months"value="4">May</option>
+        <option class="months" value="5">Jun</option>
+            <option class="months" value="6">July</option>
+         <option class="months" value="7">Aug</option>
+         <option class="months" value="8">Sep</option>
+         <option class="months" value="9">Oct</option>
+         <option class="months" value="10">Nov</option>
+         <option class="months" value="11">Dec</option>
+        </select>
+        <div class="yearWithDate" style="font-weight: bold;">
+
+        </div>
+        <br>
+        <table style="padding-left:40px;padding-bottom: 20px;">
+
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+
+                </tr>
+            </thead>
+            <tbody class="fullCalender">
+                <tr>
+                </tr>
+            </tbody>
+
+
+        </table>
+        <div class="button">
+            <div><button onclick="previousMonth()">Previous</button></div>
+            <div><button onclick="nextMonth()">Next</button></div>
+        </div>
+
+        <div> Present/Future date picker</div>
+
+        <p></p>
+    </div>
+
+    <script src="calender.js"></script>
+</body>
+
+</html>
